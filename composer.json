@@ -1,7 +1,7 @@
 {
     "name": "mediauganda/theme-cli",
     "description": "Command Line Application to quickly setup a new Theme in WordPress",
-    "keywords": ["mediauganda", "wordpress", "theme"],
+    "keywords": ["mediauganda"],
     "license": "GPL-3.0-or-later",
     "authors": [
         {

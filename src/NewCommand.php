@@ -50,7 +50,7 @@ class NewCommand extends Command
 	{
 		$this
 			->setName('new')
-			->setDescription('Create a new MU_Theme Theme installation')
+			->setDescription('Create a new MediaUganda Child Theme installation')
 			->addArgument('name', InputArgument::REQUIRED, 'Insert the folder name')
 			->addOption('dev', null, InputOption::VALUE_NONE, 'Download the latest "development" release')
 			->addOption('force', null, InputOption::VALUE_NONE, 'Forces the install even if the directory already exists');

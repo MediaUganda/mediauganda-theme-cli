@@ -14,7 +14,7 @@ if (file_exists(__DIR__.'/vendor/autoload.php')) {
 use MU_Theme\NewCommand;
 use Symfony\Component\Console\Application;
 
-$app = new Application('MU_Theme Installer', '1.0.4');
+$app = new Application('Media Uganda Theme Installer', '0.1.0');
 
 $app->add(new NewCommand(new GuzzleHttp\Client()));
 
