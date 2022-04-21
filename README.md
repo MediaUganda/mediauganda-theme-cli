@@ -1,5 +1,5 @@
 # ![awps-cli](http://www.alecaddd.com/wp-content/uploads/2017/05/awps-cli.png)
-> Nifty Command Line Application to quickly setup a new [AWPS](https://github.com/Alecaddd/awps) theme in WordPress
+> Nifty Command Line Application to quickly setup a new [MU_Theme](https://github.com/Alecaddd/awps) theme in WordPress
 
 ## Installation
 

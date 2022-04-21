@@ -1,12 +1,12 @@
 {
-    "name": "alecaddd/awps-cli",
-    "description": "Nifty Command Line Application to quickly setup a new AWPS theme in WordPress",
-    "keywords": ["awps", "wordpress", "themes"],
-    "license": "GPL-3.0",
+    "name": "mediauganda/theme-cli",
+    "description": "Command Line Application to quickly setup a new Theme in WordPress",
+    "keywords": ["mediauganda", "wordpress", "theme"],
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
-            "name": "Alessandro Castellani",
-            "email": "me@alecaddd.com"
+            "name": "Laurence Bahiirwa",
+            "email": "web@mediauganda.com"
         }
     ],
     "require": {
@@ -18,10 +18,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Awps\\": "src"
+            "MU_Theme\\": "src"
         }
     },
     "bin": [
-        "awps"
+        "mu_theme"
     ]
 }

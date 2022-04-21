@@ -1,15 +1,15 @@
 <?php
 /**
- * Generate a new installation of AWPS
+ * Generate a new installation of MU_Theme
  *
  * @category CLI
- * @package  Awps-cli
+ * @package  MU_Theme-cli
  * @author   Alessandro Castellani <me@alecaddd.com>
  * @license  http://opensource.org/licenses/gpl-3.0 GNU General Public License, version 3 (GPLv3)
  * @link     http://alecaddd.com
  */
 
-namespace Awps;
+namespace MU_Theme;
 
 use ZipArchive;
 use RuntimeException;
@@ -22,10 +22,10 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
 
 /**
- * Generate a new installation of AWPS
+ * Generate a new installation of MU_Theme
  *
  * @category CLI
- * @package  Awps-cli
+ * @package  MU_Theme-cli
  * @author   Alessandro Castellani <me@alecaddd.com>
  * @license  http://opensource.org/licenses/gpl-3.0 GNU General Public License, version 3 (GPLv3)
  * @link     http://alecaddd.com
@@ -50,7 +50,7 @@ class NewCommand extends Command
 	{
 		$this
 			->setName('new')
-			->setDescription('Create a new AWPS Theme installation')
+			->setDescription('Create a new MU_Theme Theme installation')
 			->addArgument('name', InputArgument::REQUIRED, 'Insert the folder name')
 			->addOption('dev', null, InputOption::VALUE_NONE, 'Download the latest "development" release')
 			->addOption('force', null, InputOption::VALUE_NONE, 'Forces the install even if the directory already exists');
@@ -82,10 +82,10 @@ class NewCommand extends Command
 
 		$helper = $this->getHelper("question");
 
-		$question = new Question("Name of your theme? <info>(Awps)</info> ", null);
+		$question = new Question("Name of your theme? <info>(MU_Theme)</info> ", null);
 		$themeName = $helper->ask($input, $output, $question);
 
-		$question = new Question("PHP Namespace of your theme? <info>(Awps)</info> ", null);
+		$question = new Question("PHP Namespace of your theme? <info>(MU_Theme)</info> ", null);
 		$namespace = $helper->ask($input, $output, $question);
 
 		$question = new Question("Website URL <info>(Current installation URL)</info> ", null);
@@ -170,7 +170,7 @@ class NewCommand extends Command
 	}
 
 	/**
-	 * Download the lates AWPS release
+	 * Download the lates MU_Theme release
 	 *
 	 * @param string $zipFile
 	 * @return void
@@ -245,14 +245,14 @@ class NewCommand extends Command
 
 			if (! is_null($namespace)) {
 				$str = str_replace("awps", $namespace, $str);
-				$str = str_replace("use Awps", "use " . $namespace, $str);
-				$str = str_replace("namespace Awps", "namespace " . $namespace, $str);
-				$str = str_replace("Awps\\", $namespace . "\\", $str);
-				$str = str_replace("Awps\Init", $namespace . "\Init", $str);
+				$str = str_replace("use MU_Theme", "use " . $namespace, $str);
+				$str = str_replace("namespace MU_Theme", "namespace " . $namespace, $str);
+				$str = str_replace("MU_Theme\\", $namespace . "\\", $str);
+				$str = str_replace("MU_Theme\Init", $namespace . "\Init", $str);
 			}
 
 			if (! is_null($themeName)) {
-				$str = str_replace("Awps", $themeName, $str);
+				$str = str_replace("MU_Theme", $themeName, $str);
 			}
 			
 			if (! is_null($description)) {
