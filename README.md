@@ -1,14 +1,13 @@
-# ![awps-cli](http://www.alecaddd.com/wp-content/uploads/2017/05/awps-cli.png)
-> Nifty Command Line Application to quickly setup a new [MU_Theme](https://github.com/Alecaddd/awps) theme in WordPress
+Command Line Application to quickly setup a new [MediaUganda_Theme](https://github.com/mediauganda/mu-theme-boilerplate) theme in WordPress
 
 ## Installation
 
 ```
-composer global require "alecaddd/awps-cli"
+composer global require "mediauganda/theme-cli"
 ```
 
 ## Usage
 
-* Open the location of the theme folder in a Terminal window 
-* Execute the command `awps new your_theme_name`
+* Open the location of the themes folder in a Terminal window 
+* Execute the command `mu_theme new your-theme-name`
 * Done!
